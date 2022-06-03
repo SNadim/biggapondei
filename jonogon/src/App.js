@@ -8,11 +8,13 @@ import Helmet from "react-helmet";
 import SignIn from "./pages/SignIn";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
+import Payment from "./pages/Payment";
 
 const App = () => {
     const themeStyle = lightTheme;
     return (
         <Home />
+        // <Payment />
         // <ThemeProvider theme={themeStyle}>
         //     <Helmet>
         //         <title>Form Component</title>
