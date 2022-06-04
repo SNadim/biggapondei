@@ -13,7 +13,7 @@ const path = require("path");
 const loginRouter = require("./router/loginRouter");
 const registerRouter = require("./router/registerRouter");
 const videoRouter = require("./router/videoRouter");
-
+const paymentRouter = require("./router/paymentRouter")
 // app initialization
 const app = express();
 
@@ -33,6 +33,7 @@ app.use("/",loginRouter);
 app.use("/login",loginRouter);
 app.use("/register",registerRouter);
 app.use("/video", videoRouter);
+app.use("/payment", paymentRouter)
 
 app.use((err,req,res,next)=>{
     const statusCode = err.statusCode || 500;
