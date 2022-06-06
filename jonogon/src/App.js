@@ -13,8 +13,8 @@ import Payment from "./pages/Payment";
 const App = () => {
     const themeStyle = lightTheme;
     return (
-        <Home />
-        // <Payment />
+        //<Home />
+        <Payment />
         // <ThemeProvider theme={themeStyle}>
         //     <Helmet>
         //         <title>Form Component</title>

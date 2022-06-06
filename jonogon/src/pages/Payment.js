@@ -3,16 +3,13 @@ import StripeContainer from "../components/Containers/StripeContainer";
 
 function Payment() {
   const [showItem, setShowItem] = useState(false);
+  if (showItem) {
+    return (
+      < StripeContainer />
+    );
+  }
   return (
-    <div>
-      if(showItem){<StripeContainer />}
-      else
-      {
-        <>
-          <button onClick={() => setShowItem(true)}>Buy</button>
-        </>
-      }
-    </div>
+    <button onClick={() => setShowItem(true)}>Buy</button>
   );
 }
 
