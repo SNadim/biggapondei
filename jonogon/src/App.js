@@ -9,12 +9,13 @@ import SignIn from "./pages/SignIn";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import Payment from "./pages/Payment";
+import Upload from "./pages/Upload";
 
 const App = () => {
     const themeStyle = lightTheme;
     return (
         //<Home />
-        <Payment />
+        <Upload />
         // <ThemeProvider theme={themeStyle}>
         //     <Helmet>
         //         <title>Form Component</title>
