@@ -12,6 +12,7 @@ const SignIn = () => {
         
         const response = await axios.post("http://localhost:5000/login",form, config);
         console.log(response);
+        localStorage.setItem("user",response);
         callback();
     };
 

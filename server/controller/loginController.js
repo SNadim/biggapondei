@@ -30,7 +30,7 @@ async function login(req,res,next) {
             signed: true,
         });
        res.locals.loggedInUser = userObject;
-        res.status(200).json(userObject);
+        res.status(200).json(token);
         
     } else {
         res.status(500).json("Internal Error");
@@ -40,6 +40,13 @@ async function login(req,res,next) {
     }
 }
 
+// do logout
+function logout(req,res) {
+    res.clearCookie(process.env.COOKIE_NAME);
+    res.send("logged out");
+}
+
 module.exports = {
     login,
+    logout
 }

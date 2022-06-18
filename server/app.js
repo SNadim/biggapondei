@@ -2,7 +2,6 @@
 const express = require('express');
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const busboy = require('connect-busboy');
@@ -13,7 +12,14 @@ const path = require("path");
 const loginRouter = require("./router/loginRouter");
 const registerRouter = require("./router/registerRouter");
 const videoRouter = require("./router/videoRouter");
-const paymentRouter = require("./router/paymentRouter")
+const paymentRouter = require("./router/paymentRouter");
+const productRouter = require("./router/Product");
+const dbConnect = require("./config/db.connect");
+
+// database connection
+
+//dbConnect();
+
 // app initialization
 const app = express();
 
@@ -33,7 +39,8 @@ app.use("/",loginRouter);
 app.use("/login",loginRouter);
 app.use("/register",registerRouter);
 app.use("/video", videoRouter);
-app.use("/payment", paymentRouter)
+app.use("/payment", paymentRouter);
+app.use("/product",productRouter);
 
 app.use((err,req,res,next)=>{
     const statusCode = err.statusCode || 500;

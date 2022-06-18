@@ -10,6 +10,7 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import Payment from "./pages/Payment";
 import Upload from "./pages/Upload";
+import Product from "./pages/Product";
 
 const App = () => {
     const themeStyle = lightTheme;
