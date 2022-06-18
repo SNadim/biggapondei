@@ -16,11 +16,8 @@
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
-    "react-load-script": "^0.0.6",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "react-stripe": "^0.1.0",
-    "react-stripe-checkout": "^2.6.3",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
@@ -34,10 +31,7 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ],
-    "rules": {
-      "no-unused-vars": "off"
-    }
+    ]
   },
   "browserslist": {
     "production": [

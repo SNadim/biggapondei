@@ -9,6 +9,7 @@ const Container = styled.div`
 `
 
 const Wrapper = styled.div`
+    background-color:#131921;
     padding: 0px 20px;
     display: flex;
     align-items: center;
@@ -21,16 +22,16 @@ const Left = styled.div`
     text-align: left;
 `
 const SearchContainer = styled.div`
+    background-color: white;
     border: 0.5px solid lightgray;
     display: flex;
     align-items: center;
     margin-left: 25px;
-    padding: 5px;
 `
 
 const Input = styled.input`
     border: none;
-    padding: 5px 20px;
+    padding: 10px 25px;
     ${mobile({ width: "50px" })};
 `
 const Center = styled.div`
@@ -42,10 +43,13 @@ const Center = styled.div`
 `
 
 const Logo = styled.h1`
+    cursor: pointer;
+    color: white;
     font-weight: bold;
     ${mobile({ fontSize: "24px" })};
 `
 const Right = styled.div`
+    color: white;
     flex: 1;
     display: flex;
     align-items: center;
@@ -65,7 +69,7 @@ const Navbar = () => {
     <Container>
         <Wrapper>
             <Left>
-            <Logo>Biggapondei</Logo>
+            <Logo>BiggaponDei</Logo>
             </Left>
             <Center>
               <SearchContainer>

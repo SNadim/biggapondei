@@ -5,20 +5,44 @@ const fs = require('fs');
 
 // internal imports
 const { videoUploader } = require("../controller/videoController");
+const {checkLogin} = require("../middlewares/common/checkLogin");
 
 const router = express.Router();
 
 // process login
-router.post("/",videoUploader);
+router.post("/",checkLogin,videoUploader);
 
 
 // file upload folder
-const filePath = "./720p/final_626115cf9613da00bb6ec3b5_427622.mp4";
+const filePath = "./720p/file_example_MP4_480_1_5MG.mp4";
 
-router.get("/",(req,res)=>{
-    const filePath = path.join(__dirname,'..','720p','final_626115cf9613da00bb6ec3b5_427622.mp4',);
+
+
+// get a all
+
+router.get("/:id",(req,res)=>{
+    const id = req.params.id;
+    
+// //joining path of directory 
+// const directoryPath = path.join(__dirname,'..','720p');
+// //passsing directoryPath and callback function
+// fs.readdir(directoryPath, function (err, files) {
+//     //handling error
+//     if (err) {
+//         return console.log('Unable to scan directory: ' + err);
+//     } 
+//     //listing all files using forEach
+//     files.forEach(function (file) {
+//         const filePath = path.join(__dirname,'..','720p',id,file,);
+//         res.sendFile(filePath);
+//     });
+// })
+    // const filePath = path.join(__dirname,'..','720p',id,'big_buck_bunny_480p_2mb.mp4',);
+    const filePath = path.join(__dirname,'..','720p',`${id}.mp4`,);
     res.sendFile(filePath);
 });
+
+
 
 
 module.exports = router;

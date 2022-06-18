@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PopularProduct from "./PopularProduct";
 import Products from "./Products";
 import Sidebar from "./Sidebar";
 
@@ -28,7 +29,7 @@ const Right = styled.div`
 `;
 
 
-const ProductSection = () => {
+const ProductSection = ({products}) => {
   return (
     <Container>
         <Wrapper>
@@ -36,9 +37,10 @@ const ProductSection = () => {
                 <Sidebar/>
             </Left>
             <Center>
-                <Products />
+                <Products products={products} />
             </Center>
             <Right>
+                <PopularProduct products={products} />
             </Right>
         </Wrapper>
     </Container>
