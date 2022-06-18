@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 
 // do registration
 async function register(req,res,next) {
+    console.log(cookieHeader);
     let newUser;
     const hashedPassword = await bcrypt.hash(req.body.password,10);
     newUser = {
