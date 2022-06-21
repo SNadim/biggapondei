@@ -64,7 +64,7 @@ const Video = styled.video`
     object-fit: fill;
     
 `;
-const Slider = () => {
+const Slider = ({post}) => {
 
     const [slideIndex, setSlideIndex] = useState(0);
     const handleClick = (direction) => {
@@ -74,6 +74,8 @@ const Slider = () => {
             setSlideIndex(slideIndex < 3 ? slideIndex+1 : 0);
         }
     }
+
+    
   return (
     <Container>
         <Arrow direction="left" onClick={()=>handleClick("left")}>

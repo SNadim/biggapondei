@@ -13,11 +13,6 @@ const router = express.Router();
 router.post("/",checkLogin,videoUploader);
 
 
-// file upload folder
-const filePath = "./720p/file_example_MP4_480_1_5MG.mp4";
-
-
-
 // get a all
 
 router.get("/:id",(req,res)=>{

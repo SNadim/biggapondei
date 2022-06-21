@@ -9,6 +9,8 @@ router.post("/",checkLogin,async (req,res)=>{
 
 // get all products
 router.get("/",(req,res)=>{
+  
+   console.log(req.query);
     res.status(200).json(data);
 });
 
@@ -28,8 +30,8 @@ router.delete("/:id",checkLogin,(req,res)=>{
 });
 
 // get a product
-router.get("/find/:id",checkLogin,(req,res)=>{
-    res.status(200).json("Hello world");
+router.get("/:id",(req,res)=>{
+    res.status(200).json(data[0]);
 });
 
 // get all products
