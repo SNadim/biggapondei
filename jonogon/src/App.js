@@ -8,6 +8,7 @@ import SignIn from "./pages/SignIn";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import Payment from "./pages/Payment";
+import Upload from "./pages/Upload";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 
@@ -15,6 +16,31 @@ const App = () => {
     const themeStyle = lightTheme;
     const user = true;
     return (
+<<<<<<< HEAD
+        //<Home />
+        <Payment />
+        // <ThemeProvider theme={themeStyle}>
+        //     <Helmet>
+        //         <title>Form Component</title>
+        //         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        //         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        //         <link
+        //             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700;900&family=Ubuntu:wght@400;500;700&display=swap"
+        //             rel="stylesheet"
+        //         />
+        //     </Helmet>
+        //     <GlobalStyle />
+        //     <Layout>
+        //       <Router>
+        //         <Routes>
+        //         <Route path="/" element={<Navigate to="/signin" replace />}/>
+        //             <Route exact path="/signin" element={<SignIn />} />
+        //             <Route exact path="/register" element={<Register />} />
+        //         </Routes>
+        //         </Router>
+        //     </Layout>
+        // </ThemeProvider>
+=======
         // <Product />
         // <Payment/>
 
@@ -36,6 +62,7 @@ const App = () => {
                 </Routes>
         </Router>
         </ThemeProvider>
+>>>>>>> c613c785b487134f597179cee42bb6d507f66a35
     );
 };
 

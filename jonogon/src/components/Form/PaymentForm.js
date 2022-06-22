@@ -57,23 +57,20 @@ export default function PaymentForm() {
     }
   };
 
+  if (success) {
+    return (
+      <div>
+        <h2>Purchased</h2>
+      </div>
+    );
+  }
+
   return (
-    <>
-      if(success)
-      {
-        <div>
-          <h2>Purchased</h2>
-        </div>
-      }
-      else
-      {
-        <form onSubmit={handleSubmit}>
-          <div>
-            <CardElement options={CARD_OPTIONS} />
-          </div>
-          <button>Pay</button>
-        </form>
-      }
-    </>
+    <form onSubmit={handleSubmit}>
+      <div>
+        <CardElement options={CARD_OPTIONS} />
+      </div>
+      <button>Pay</button>
+    </form>
   );
 }
