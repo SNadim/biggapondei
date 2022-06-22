@@ -10,10 +10,11 @@ import Home from "./pages/Home";
 import Payment from "./pages/Payment";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
+import { useSelector } from "react-redux";
 
 const App = () => {
     const themeStyle = lightTheme;
-    const user = true;
+    const user = useSelector(state=>state.user.currentUser);
     return (
         // <Product />
         // <Payment/>

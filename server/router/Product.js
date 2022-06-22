@@ -10,7 +10,7 @@ router.post("/",checkLogin,async (req,res)=>{
 // get all products
 router.get("/",(req,res)=>{
   
-   console.log(req.query);
+   //console.log(req.query);
     res.status(200).json(data);
 });
 

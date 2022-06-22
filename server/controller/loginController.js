@@ -30,7 +30,7 @@ async function login(req,res,next) {
             signed: true,
         });
        res.locals.loggedInUser = userObject;
-        res.status(200).json(token);
+        res.status(200).json({...userObject,token});
         
     } else {
         res.status(500).json("Internal Error");

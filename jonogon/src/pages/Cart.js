@@ -5,6 +5,8 @@ import { mobile } from "../responsive";
 import {useSelector} from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 
 const KEY = process.env.REACT_APP_STRIPE;
 
@@ -154,7 +156,21 @@ const Cart = () => {
     setStripeToken(token);
   }
 
-  console.log(stripeToken);
+  useEffect(()=>{
+    const makeRequest = async ()=>{
+      try {
+        const res = await axios.post("http://localhost:5000/payment",{
+                    tokenId: stripeToken.id,
+                    amount: 500,
+                }
+                );
+                console.log(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    stripeToken && makeRequest();
+  },[stripeToken, cart.total])
   return (
     <Container>
       <Navbar />

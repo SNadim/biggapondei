@@ -12,7 +12,7 @@ const path = require("path");
 const loginRouter = require("./router/loginRouter");
 const registerRouter = require("./router/registerRouter");
 const videoRouter = require("./router/videoRouter");
-const paymentRouter = require("./router/paymentRouter");
+const paymentRouter = require("./router/stripe.js");
 const productRouter = require("./router/Product");
 const dbConnect = require("./config/db.connect");
 
