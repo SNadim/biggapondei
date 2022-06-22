@@ -16,7 +16,7 @@ const App = () => {
     const themeStyle = lightTheme;
     return (
         //<Home />
-        <Upload />
+        <Payment />
         // <ThemeProvider theme={themeStyle}>
         //     <Helmet>
         //         <title>Form Component</title>
