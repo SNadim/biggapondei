@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { DoneRounded, HomeRounded,  CopyrightRounded, GroupRounded } from '@material-ui/icons';
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   background-color: rgb(251, 251, 255);
@@ -93,6 +94,7 @@ const SeeAll = styled.span`
       color: grey;
 `;
 const HashtagWrapper = styled.div`
+    padding-bottom: 25px;
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
@@ -126,15 +128,15 @@ const Sidebar = () => {
           <SidebarList>
             <SidebarListItem>
               <AcProfile src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"/>
-              <BrandTitle>Bata</BrandTitle><DoneRounded style={{backgroundColor: "rgb(32,213,236)",color:"white",borderRadius:"50%",fontSize: "16px"}} />
+              <Link style={{textDecoration:"none", color: "black"}} to="/?brand=bata"><BrandTitle>Bata</BrandTitle><DoneRounded style={{backgroundColor: "rgb(32,213,236)",color:"white",borderRadius:"50%",fontSize: "16px"}} /></Link>
             </SidebarListItem>
             <SidebarListItem>
               <AcProfile src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"/>
-              <BrandTitle>Apex</BrandTitle><DoneRounded style={{backgroundColor: "rgb(32,213,236)",color:"white",borderRadius:"50%",fontSize: "16px"}} />
+              <Link style={{textDecoration:"none", color: "black"}} to="/?brand=apex"><BrandTitle>Apex</BrandTitle><DoneRounded style={{backgroundColor: "rgb(32,213,236)",color:"white",borderRadius:"50%",fontSize: "16px"}} /></Link>
             </SidebarListItem>
             <SidebarListItem>
               <AcProfile src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"/>
-              <BrandTitle>Guchi</BrandTitle><DoneRounded style={{backgroundColor: "rgb(32,213,236)",color:"white",borderRadius:"50%",fontSize: "16px"}} />
+              <Link style={{textDecoration:"none", color: "black"}} to="/?brand=guchi"><BrandTitle>Guchi</BrandTitle><DoneRounded style={{backgroundColor: "rgb(32,213,236)",color:"white",borderRadius:"50%",fontSize: "16px"}} /></Link>
             </SidebarListItem>
             <SidebarListItem>
               <SeeAll>see all</SeeAll>
@@ -144,10 +146,10 @@ const Sidebar = () => {
         <SidebarMenu>
           <SidebarTitle>Discover</SidebarTitle>
           <HashtagWrapper>
-          <Hashtag># shirt</Hashtag>
-          <Hashtag># pant</Hashtag>
-          <Hashtag># saree</Hashtag>
-          <Hashtag># panjabi</Hashtag>
+            <Link style={{textDecoration:"none", color: "black"}} to="/?hashtag=shirt"><Hashtag># shirt</Hashtag></Link>
+            <Link style={{textDecoration:"none", color: "black"}} to="/?hashtag=pant"><Hashtag># pant</Hashtag></Link>
+            <Link style={{textDecoration:"none", color: "black"}} to="/?hashtag=panjabi"><Hashtag># panjabi</Hashtag></Link>
+            <Link style={{textDecoration:"none", color: "black"}} to="/?hashtag=saree"><Hashtag># saree</Hashtag></Link>
           </HashtagWrapper>
         </SidebarMenu>
         <SidebarMenu>

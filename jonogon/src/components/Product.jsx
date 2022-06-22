@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { FavoriteBorder, PlayArrow ,ShoppingCartOutlined,PauseCircleFilledRounded,Favorite } from '@material-ui/icons';
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Info = styled.div`
     opacity: 0;
@@ -70,7 +71,13 @@ const TextWrapper = styled.div`
     color: white;
 `;
 const User = styled.h3``;
-const Desc = styled.p``;
+const Desc = styled.p`
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+`;
 
 const VideoWrapper = styled.div`
     display: flex;
@@ -122,12 +129,12 @@ const Product = ({tag,product}) => {
          >
            <source src={`http://localhost:5000/video/${product.id}`} type="video/mp4" />
        </Video>
-       <p style={{marginTop:"10px"}}>dekhun ki kore fello?</p>
+       <p style={{marginTop:"10px"}}>{product.thumbnail}</p>
        </VideoWrapper> 
 }
         <Info>
         <Icon>
-                <ShoppingCartOutlined />
+            <Link to={`/product/${product.id}`} style={{color:"black"}} className='link'><ShoppingCartOutlined /></Link>
             </Icon>
             {
                 playing ? <Icon>
@@ -146,7 +153,7 @@ const Product = ({tag,product}) => {
             </Icon>
             <TextWrapper>
                 <User>{product.brand}</User>
-                <Desc>{product.description}</Desc>
+                <Desc>{product.thumbnail}</Desc>
             </TextWrapper>
         </Info>
     </Container>

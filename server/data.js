@@ -6,7 +6,9 @@ const data = [
         brand: "Bata",
         likes: "100",
         comments: "12",
-        description: "This is an example description",
+        description: "lorem20",
+        thumbnail: "This is thumbnail",
+        price: 100,
     },
     {
         id: 123456789,
@@ -16,6 +18,8 @@ const data = [
         likes: "102",
         comments: "13",
         description: "This is an example description",
+        thumbnail : "This is thumbnail",
+        price: 200,
     }
 ];
 
